@@ -1,10 +1,9 @@
 define([
 'appModels/diagramModel',
 'appViews/diagramView',
-'appControllers/appController',
 'jquery',
 'backbone'
-], function(diagramModel, DiagramView, Controller, $, Backbone){
+], function(diagramModel, DiagramView, $, Backbone){
 
 	var Application = (function() {
 		var appView;
