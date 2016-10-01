@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Module JS Application </title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<script src="https://use.fontawesome.com/1922f65881.js"></script>
+	<link href="css/application.css" rel="stylesheet" media="screen">
+	<script src="js/library/jsPlumb.min.js"></script>
+	<script data-main="js/init" src="js/library/require.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="back">
+			<a href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+		</div>
+		<div class="edit">
+			<a href="#">
+				Some flow part <i class="fa fa-pencil" aria-hidden="true"></i>
+			</a>
+		</div>
+		<div class="help">
+			<a href="#">
+				<i class="fa fa-question" aria-hidden="true"></i>
+			</a>
+		</div>
+	</div>
+
+	<div id="diagram" class="diagram-widget"></div>
+<!-- templates-->
+
+	<script id="diagram-widget" type="text/template">
+		<div class="start-point-container">
+			<div class="startPointBlock">
+				<span>START</span>
+			</div>
+		</div>
+		<div class="data-blocks-container">
+		</div>
+		<div class="add-btn-container">
+			<div class="add-block-btn">
+				<i class="fa fa-plus" aria-hidden="true"></i>
+			</div>
+		</div>
+	</script>
+
+	<script id="data-block" type="text/template">
+		<div class="data-block-header"><%= blockName %></div>
+		<div class="main-content">
+			<div class="data-block-content">
+				<ul class="items"></ul>
+			</div>
+			<div class="data-block-footer">
+				<i class="fa fa-plus-circle" aria-hidden="true"></i>
+			</div>
+		</div>
+	</script>
+
+	<script id="data-block-item" type="text/template">
+		<div class="data-block-item-name"><%= itemName %></div>
+		<div class="controls">
+			<span class="data-block-item-edit">
+				<i class="fa fa-pencil" aria-hidden="true"></i>
+			</span>
+			<span class="data-block-item-delete">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</span>
+		</div>
+	</script>
+
+</body>
+
+</html>
